@@ -1,5 +1,11 @@
+### This Website is hosted 
+[glitch](https://innermonologue.glitch.me/)  
+[github](https://adarshnaidu.github.io/innerMONOLOGUE/)
+---
+
 innerMONOLOGUE
 =====
+---
 
 ## What's Inner Monologue?
 An internal monologue, also called self-talk or inner speech, is a person's inner voice which provides a running verbal monologue of thoughts while they are conscious.  
