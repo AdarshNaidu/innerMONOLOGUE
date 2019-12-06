@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+}
+html {
+}
+body {
+  margin: 0%;
+  padding: 0%;
+  background-color: #505050;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(27, 27, 27);
+  padding: 5px 15%;
+  z-index: -1;
+}
+
+.logo {
+  font-family: "Varela Round", sans-serif;
+  font-size: 2em;
+  color: white;
+}
+.logo span {
+  font-weight: bolder;
+}
+
+.links {
+  text-decoration: none;
+  display: flex;
+}
+
+.links a {
+  color: white;
+  margin: 0% 10px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  background-color: rgba(255, 105, 0, 1);
+  text-decoration: none;
+}
+
+.links a::before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  right: 100%;
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  transition: all 0.5s;
+  z-index: -1;
+}
+
+.links a:hover::before {
+  right: 0%;
+}
+
+main {
+  padding: 20px 15%;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+main div {
+  padding: 20px;
+  background-color: #424242;
+  border-radius: 20px;
+  margin: 20px;
+  transition: all 1s;
+  flex: 1 1 0;
+}
+
+h1 {
+  color: rgba(0, 208, 132, 1);
+  text-align: center;
+}
+
+p {
+  color: white;
+  font-size: 0em;
+  transition: all 0.5s;
+  opacity: 0;
+}
+
+main div:hover p {
+  font-size: 1em;
+  opacity: 1;
+}
+
+@media screen and (max-width: 1200px) {
+  main {
+    padding: 20px 5%;
+  }
+  p {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  main {
+    padding: 0;
+    flex-flow: column;
+  }
+  header {
+    flex-flow: column;
+  }
+}
