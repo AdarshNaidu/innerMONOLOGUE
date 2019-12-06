@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" type="image/png" href="https://cdn.glitch.com/5afb9692-c4df-48e3-a4d5-8c05061217b7%2Ficon.png?v=1575625996294" sizes="32x32" />
+    <link rel="icon" type="image/png" href="https://cdn.glitch.com/5afb9692-c4df-48e3-a4d5-8c05061217b7%2Ficon.png?v=1575625996294" sizes="16x16" />
+    <title>innerMONOLOGUE</title>
+    <link rel="stylesheet" type="text/css" href="chatRoom.css" />
+    <script src="chatRoom.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <a href="index.html" style="text-decoration: none"
+        ><div class="logo"><span>inner</span>MONOLOGUE</div></a
+      >
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="howItWorks.html">How It Works</a>
+      </div>
+    </header>
+
+    <main>
+      <div class="labels">
+        <div>
+          <p>You as</p>
+          <h1 style="color: rgba(0, 208, 132, 1); margin: 0%;">Advisor</h1>
+        </div>
+        <div>
+          <p>You as</p>
+          <h1 style="color: rgba(235, 20, 76, 1); margin:0%;">Yourself</h1>
+        </div>
+      </div>
+
+      <div class="chatBox">
+        <ul>
+          <li>What bothers you today?</li>
+        </ul>
+
+        <div class="interact">
+          <input
+            id="chat"
+            type="text"
+            placeholder="Press Enter to Send, Tab to toggle"
+          />
+          <div
+            class="send"
+            title="press Enter instead"
+            onclick="handlers.addChat()"
+          >
+            Send
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="toggle"
+        title="press Tab instead"
+        onclick="chatList.toggleUser()"
+      >
+        Toggle
+      </div>
+    </main>
+
+    <script src="chatRoom.js"></script>
+  </body>
+</html>
