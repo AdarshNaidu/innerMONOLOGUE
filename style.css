@@ -1,0 +1,279 @@
+*{
+    box-sizing: border-box;
+}
+html{
+}
+body{
+    margin: 0%;
+    padding: 0%;
+    background-color: #505050;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(27, 27, 27);
+    padding: 5px 15%;
+    z-index: -1;
+}
+
+.logo{
+    font-family: 'Varela Round', sans-serif;
+    font-size: 2em;
+    color: white;
+}
+.logo span{
+    font-weight: bolder;
+}
+
+.links{
+    text-decoration: none;
+    display: flex;
+}
+
+.links a{
+    color: white;
+    margin: 0% 10px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    background-color: rgba(255, 105, 0, 1);
+}
+
+.links a::before{
+    content:"";
+    position: absolute;
+    top: 0%;
+    right: 100%;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    transition: all 0.5s;
+    z-index: -1;
+}
+
+.links a:hover::before{
+    right: 0%;
+}
+
+main{
+    margin: 0% 15%;
+    position: relative;
+    height: 92vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.description{
+    display: block;
+    color:black;
+    font-family: 'Varela Round', sans-serif;
+    display: flex;
+    flex-flow: column;
+}
+.description h1{
+    font-size: 2.5em;
+    margin: 10px 0;
+}
+.description span{
+    display: inline-block;
+    position: relative;
+    font-weight: bolder;
+    font-size: 1.1em;
+}
+#A{
+    animation: A 4s 2 alternate;
+    color:rgba(235, 20, 76, 1);
+}
+#B{
+    animation: B 4s 2 alternate;
+    color: rgba(235, 20, 76, 1);
+}
+#C{
+    animation: C 4s 2 alternate;
+    color: rgba(235, 20, 76, 1);
+}
+@keyframes A{
+    100%,70%{
+        transform: rotateZ(60deg);
+        top:-10px;
+        left: -20px;
+    }
+    0%,50%{
+        transform: rotateZ(0deg);
+        top:0;
+        left:0;
+    }
+}
+@keyframes B{
+    100%,80%{
+        transform: rotateZ(-40deg);
+        top:-10px;
+        left: -20px;
+    }
+    0%,50%{
+        transform: rotateZ(0deg);
+        top:0;
+        left:0;
+    }
+}
+@keyframes C{
+    100%,90%{
+        transform: rotateZ(30deg);
+        top:-10px;
+        left: -20px;
+    }
+    0%,50%{
+        transform: rotateZ(0deg);
+        top:0;
+        left:0;
+    }
+}
+
+.container{
+    flex:0 0 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    /* position: absolute; */
+    /* top: 50%;
+    left: 50%;
+    transform: translate(0,-50%); */
+    background-color: white;
+    border-radius: 50%;
+    text-align: center;
+    /* line-height: 500px; */
+    border: 5px solid #505050;
+    overflow: hidden;
+    box-shadow: 2px 2px 15px 1px black;
+    z-index: -1;
+}
+
+.container .logo{
+    color: black;
+    animatin: animateLogo 2s infinite;
+    animation-delay: 1.5s;
+}
+
+@keyframes animateLogo{
+    0%{
+        color: black;
+    }
+    100%{
+        color: orange;
+    }
+}
+
+.container svg{
+    position: absolute;
+    z-index: -1;
+    transform: scale(0.8);
+    visibility: hidden;
+}
+
+#a{
+    animation:animate1 2s infinite;
+    animation-delay:0 ;
+    z-index: 1;
+}
+#b{
+    animation:animate2 2s infinite;
+    animation-delay: 0.3s;
+}
+#c{
+    animation:animate3 2s infinite;
+    animation-delay: 0.5s;
+}
+#d{
+    animation:animate1 2s infinite;
+    animation-delay: 0.8s;
+}
+#e{
+    animation:animate2 2s infinite;
+    animation-delay:1s ;
+    z-index: 1;
+}
+#f{
+    animation:animate3 2s infinite;
+    animation-delay:1.3s ;
+}
+#g{
+    animation:animate1 2s infinite;
+    animation-delay: 0.5s ;
+    z-index: 1;
+}
+
+
+
+
+
+
+
+@keyframes animate1{
+    0%{
+        top:5%;
+        left: -100%;
+        visibility: visible;
+    }
+    100%{
+        top:-70%;
+        left: 50%;
+    }
+}
+
+@keyframes animate2{
+    0%{
+        top:10%;
+        left:-95%;
+        visibility: visible;
+    }
+    100%{
+        top:-30%;
+        left:70%;
+    }
+}
+
+@keyframes animate3{
+    0%{
+        top:15%;
+        left:-95%;
+        visibility: visible;
+    }
+    100%{
+        top:-5%;
+        left:70%;
+    }
+}
+
+@media screen and (max-width:1200px){
+    main{
+        margin: 0% 5%;
+    }
+}
+
+@media screen and (max-width:800px){
+    main{
+        display:block;
+        text-align:center;
+    }
+    header{
+        flex-flow: column;
+    }
+    .container{
+        left:50%;
+        transform:translateX(-50%) scale(0.5);
+        margin:auto;
+        flex: none;
+    }
+    .description{
+        margin: 5px;
+    }
+}
